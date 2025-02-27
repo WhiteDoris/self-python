@@ -12,7 +12,7 @@ COPY . /app
 RUN mv /app/sources.list /etc/apt/ \
     && rm -f /etc/apt/sources.list.d/debian.sources \
     && apt-get update && \
-    apt-get install -y vim telnet iputils-ping make \
+    apt-get install -y vim telnet iputils-ping make procps\
     # 设置时区为上海（可替换其他时区）
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
